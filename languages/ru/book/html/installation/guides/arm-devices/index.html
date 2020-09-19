@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="utf-8">
+        <title>ARM Devices - Void Linux Handbook</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../../">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+        </script>
+		<!-- Work around some values being stored in localStorage wrapped in quotes -->
+		<script type="text/javascript">
+			try {
+				var sidebar = localStorage.getItem('mdbook-sidebar');
+
+				if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+					localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+				}
+			} catch (e) { }
+		</script>
+
+		<header>
+			<nav id="void-nav">
+				<ul>
+					<li><a id="skip-to-content" tabindex="1" href="#main">Skip to content</a></li>
+					<li>
+						<button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+								<path d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z"/>
+							</svg>
+						</button>
+					</li>
+				
+					<li>
+						<button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+								<path d="M7.5 13c3.04 0 5.5-2.46 5.5-5.5S10.54 2 7.5 2 2 4.46 2 7.5 4.46 13 7.5 13zm4.55.46C10.79 14.43 9.21 15 7.5 15 3.36 15 0 11.64 0 7.5S3.36 0 7.5 0C11.64 0 15 3.36 15 7.5c0 1.71-.57 3.29-1.54 4.55l6.49 6.49-1.41 1.41-6.49-6.49z"/>
+							</svg>
+						</button>
+					</li>
+				
+                                        <noscript>
+                                          <li class="js-unavailable">Search functionality requires JavaScript</li>
+                                        </noscript>
+				</ul>
+				<ul id="nav-right">
+					<li><a href="https://www.voidlinux.org">Home</a></li>
+					<li><a href="https://www.voidlinux.org/news/">News</a></li>
+					<li><a href="https://www.voidlinux.org/download/">Download</a></li>
+					<li><a href="https://www.voidlinux.org/packages/">Packages</a></li>
+					<li><a href="https://docs.voidlinux.org">Documentation</a></li>
+					<li><a href="https://man.voidlinux.org/">Manual Pages</a></li>
+					<li><a href="https://reddit.com/r/voidlinux">Forum</a></li>
+					<li><a href="https://voidlinux.org/contribute/">Join Us</a></li>
+					<li><a href="https://github.com/void-linux">GitHub</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="content">
+
+			<!-- Hide / unhide sidebar before it is displayed -->
+			<script type="text/javascript">
+				var html = document.querySelector('html');
+				var sidebar = 'hidden';
+				if (document.body.clientWidth >= 1080) {
+					try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+					sidebar = sidebar || 'visible';
+				}
+				html.classList.remove('sidebar-visible');
+				html.classList.add("sidebar-" + sidebar);
+			</script>
+
+			<nav id="sidebar" aria-label="Table of contents">
+				<ol class="chapter"><li class="chapter-item expanded "><a href="../../../about/index.html"><strong aria-hidden="true">1.</strong> About</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../about/history.html"><strong aria-hidden="true">1.1.</strong> History</a></li><li class="chapter-item expanded "><a href="../../../about/about-this-handbook.html"><strong aria-hidden="true">1.2.</strong> About This Handbook</a></li><li class="chapter-item expanded "><a href="../../../about/infradocs.html"><strong aria-hidden="true">1.3.</strong> InfraDocs</a></li></ol></li><li class="chapter-item expanded "><a href="../../../installation/index.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../installation/live-images/index.html"><strong aria-hidden="true">2.1.</strong> Live Installers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../installation/live-images/prep.html"><strong aria-hidden="true">2.1.1.</strong> Prepare Installation Media</a></li><li class="chapter-item expanded "><a href="../../../installation/live-images/partitions.html"><strong aria-hidden="true">2.1.2.</strong> Partitioning Notes</a></li><li class="chapter-item expanded "><a href="../../../installation/live-images/guide.html"><strong aria-hidden="true">2.1.3.</strong> Installation Guide</a></li></ol></li><li class="chapter-item expanded "><a href="../../../installation/guides/index.html"><strong aria-hidden="true">2.2.</strong> Advanced Installation Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../installation/guides/chroot.html"><strong aria-hidden="true">2.2.1.</strong> Installation via chroot (x86/x86_64)</a></li><li class="chapter-item expanded "><a href="../../../installation/guides/fde.html"><strong aria-hidden="true">2.2.2.</strong> Full Disk Encryption</a></li><li class="chapter-item expanded "><a href="../../../installation/guides/arm-devices/index.html" class="active"><strong aria-hidden="true">2.2.3.</strong> ARM Devices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../installation/guides/arm-devices/platforms.html"><strong aria-hidden="true">2.2.3.1.</strong> Supported Platforms</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../installation/musl.html"><strong aria-hidden="true">2.3.</strong> musl</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/index.html"><strong aria-hidden="true">3.</strong> Configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/man.html"><strong aria-hidden="true">3.1.</strong> Manual Pages</a></li><li class="chapter-item expanded "><a href="../../../config/firmware.html"><strong aria-hidden="true">3.2.</strong> Firmware</a></li><li class="chapter-item expanded "><a href="../../../config/locales.html"><strong aria-hidden="true">3.3.</strong> Locales and Translations</a></li><li class="chapter-item expanded "><a href="../../../config/users-and-groups.html"><strong aria-hidden="true">3.4.</strong> Users and Groups</a></li><li class="chapter-item expanded "><a href="../../../config/services/index.html"><strong aria-hidden="true">3.5.</strong> Services and Daemons - runit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/services/user-services.html"><strong aria-hidden="true">3.5.1.</strong> Per-User Services</a></li><li class="chapter-item expanded "><a href="../../../config/services/logging.html"><strong aria-hidden="true">3.5.2.</strong> Logging</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/rc-files.html"><strong aria-hidden="true">3.6.</strong> rc.conf, rc.local and rc.shutdown</a></li><li class="chapter-item expanded "><a href="../../../config/cron.html"><strong aria-hidden="true">3.7.</strong> Cron</a></li><li class="chapter-item expanded "><a href="../../../config/ssd.html"><strong aria-hidden="true">3.8.</strong> Solid State Drives</a></li><li class="chapter-item expanded "><a href="../../../config/security/index.html"><strong aria-hidden="true">3.9.</strong> Security</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/security/apparmor.html"><strong aria-hidden="true">3.9.1.</strong> AppArmor</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/date-time.html"><strong aria-hidden="true">3.10.</strong> Date and Time</a></li><li class="chapter-item expanded "><a href="../../../config/kernel.html"><strong aria-hidden="true">3.11.</strong> Kernel</a></li><li class="chapter-item expanded "><a href="../../../config/power-management.html"><strong aria-hidden="true">3.12.</strong> Power Management</a></li><li class="chapter-item expanded "><a href="../../../config/network/index.html"><strong aria-hidden="true">3.13.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/network/firewalls.html"><strong aria-hidden="true">3.13.1.</strong> Firewalls</a></li><li class="chapter-item expanded "><a href="../../../config/network/wpa_supplicant.html"><strong aria-hidden="true">3.13.2.</strong> wpa_supplicant</a></li><li class="chapter-item expanded "><a href="../../../config/network/iwd.html"><strong aria-hidden="true">3.13.3.</strong> IWD</a></li><li class="chapter-item expanded "><a href="../../../config/network/networkmanager.html"><strong aria-hidden="true">3.13.4.</strong> NetworkManager</a></li><li class="chapter-item expanded "><a href="../../../config/network/connman.html"><strong aria-hidden="true">3.13.5.</strong> ConnMan</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/network-filesystems.html"><strong aria-hidden="true">3.14.</strong> Network Filesystems</a></li><li class="chapter-item expanded "><a href="../../../config/session-management.html"><strong aria-hidden="true">3.15.</strong> Session and Seat Management</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/index.html"><strong aria-hidden="true">3.16.</strong> Graphical Session</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/graphical-session/graphics-drivers/index.html"><strong aria-hidden="true">3.16.1.</strong> Graphics Drivers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/graphical-session/graphics-drivers/amd.html"><strong aria-hidden="true">3.16.1.1.</strong> AMD or ATI</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/graphics-drivers/intel.html"><strong aria-hidden="true">3.16.1.2.</strong> Intel</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/graphics-drivers/nvidia.html"><strong aria-hidden="true">3.16.1.3.</strong> NVIDIA</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/graphics-drivers/optimus.html"><strong aria-hidden="true">3.16.1.4.</strong> NVIDIA Optimus</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/xorg.html"><strong aria-hidden="true">3.16.2.</strong> Xorg</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/wayland.html"><strong aria-hidden="true">3.16.3.</strong> Wayland</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/fonts.html"><strong aria-hidden="true">3.16.4.</strong> Fonts</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/icons.html"><strong aria-hidden="true">3.16.5.</strong> Icons</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/gnome.html"><strong aria-hidden="true">3.16.6.</strong> GNOME</a></li><li class="chapter-item expanded "><a href="../../../config/graphical-session/kde.html"><strong aria-hidden="true">3.16.7.</strong> KDE</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/media/index.html"><strong aria-hidden="true">3.17.</strong> Multimedia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/media/alsa.html"><strong aria-hidden="true">3.17.1.</strong> ALSA</a></li><li class="chapter-item expanded "><a href="../../../config/media/pulseaudio.html"><strong aria-hidden="true">3.17.2.</strong> PulseAudio</a></li><li class="chapter-item expanded "><a href="../../../config/media/sndio.html"><strong aria-hidden="true">3.17.3.</strong> sndio</a></li></ol></li><li class="chapter-item expanded "><a href="../../../config/bluetooth.html"><strong aria-hidden="true">3.18.</strong> Bluetooth</a></li><li class="chapter-item expanded "><a href="../../../config/texlive.html"><strong aria-hidden="true">3.19.</strong> TeX Live</a></li><li class="chapter-item expanded "><a href="../../../config/external-applications.html"><strong aria-hidden="true">3.20.</strong> External Applications</a></li><li class="chapter-item expanded "><a href="../../../config/print/index.html"><strong aria-hidden="true">3.21.</strong> Printing</a></li><li class="chapter-item expanded "><a href="../../../config/containers-and-vms/index.html"><strong aria-hidden="true">3.22.</strong> Containers and Virtual Machines</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../config/containers-and-vms/libvirt.html"><strong aria-hidden="true">3.22.1.</strong> libvirt</a></li><li class="chapter-item expanded "><a href="../../../config/containers-and-vms/lxc.html"><strong aria-hidden="true">3.22.2.</strong> LXC</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../xbps/index.html"><strong aria-hidden="true">4.</strong> XBPS Package Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../xbps/advanced-usage.html"><strong aria-hidden="true">4.1.</strong> Advanced Usage</a></li><li class="chapter-item expanded "><a href="../../../xbps/repositories/index.html"><strong aria-hidden="true">4.2.</strong> Repositories</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../xbps/repositories/mirrors/index.html"><strong aria-hidden="true">4.2.1.</strong> Mirrors</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../xbps/repositories/mirrors/changing.html"><strong aria-hidden="true">4.2.1.1.</strong> Changing Mirrors</a></li><li class="chapter-item expanded "><a href="../../../xbps/repositories/mirrors/tor.html"><strong aria-hidden="true">4.2.1.2.</strong> Using Tor Mirrors</a></li></ol></li><li class="chapter-item expanded "><a href="../../../xbps/repositories/restricted.html"><strong aria-hidden="true">4.2.2.</strong> Restricted Packages</a></li><li class="chapter-item expanded "><a href="../../../xbps/repositories/custom.html"><strong aria-hidden="true">4.2.3.</strong> Custom Repositories</a></li><li class="chapter-item expanded "><a href="../../../xbps/repositories/signing.html"><strong aria-hidden="true">4.2.4.</strong> Signing Repositories</a></li></ol></li><li class="chapter-item expanded "><a href="../../../xbps/troubleshooting/index.html"><strong aria-hidden="true">4.3.</strong> Troubleshooting XBPS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../xbps/troubleshooting/common-issues.html"><strong aria-hidden="true">4.3.1.</strong> Common Issues</a></li><li class="chapter-item expanded "><a href="../../../xbps/troubleshooting/static.html"><strong aria-hidden="true">4.3.2.</strong> Static XBPS</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../contributing/index.html"><strong aria-hidden="true">5.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../contributing/void-docs/index.html"><strong aria-hidden="true">5.1.</strong> Contributing To void-docs</a></li></ol></li></ol>
+			</nav>
+
+			<!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+			<script type="text/javascript">
+				document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+	document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+	Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+		link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+	});
+			</script>
+
+			<div id="page-wrapper">
+				
+				<div id="search-wrapper" class="hidden">
+					<form id="searchbar-outer" class="searchbar-outer">
+						<input type="search" name="search" id="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+					</form>
+					<div id="searchresults-outer" class="searchresults-outer hidden">
+						<div id="searchresults-header" class="searchresults-header"></div>
+						<ul id="searchresults">
+						</ul>
+					</div>
+				</div>
+				
+
+				<main id="main">
+					<h1><a class="header" href="#arm-devices" id="arm-devices">ARM Devices</a></h1>
+<p>Void Linux provides packages and images for several ARM devices. Installing
+Void on such devices can be done in several ways:</p>
+<ul>
+<li><a href="#pre-built-images">Pre-built images</a>: images that can be flashed directly
+onto an SD card or other storage medium, but which give you a limited
+partition layout, and require manual expansion if you wish to increase the
+size of the partitions;</li>
+<li><a href="#tarball-installation">Tarball installation</a>: PLATFORMFS and ROOTFS tarballs
+that can be extracted to a previously prepared partition scheme; and</li>
+<li><a href="#chroot-installation">Chroot installation</a>: follows most of the steps
+outlined in <a href="../chroot.html">the chroot guide</a>.</li>
+</ul>
+<p>This guide also outlines <a href="#configuration">configuration steps</a> that are
+mostly specific to such devices.</p>
+<p>Since most of the commands in this guide will be run on external storage, it
+is important to run <a href="https://man.voidlinux.org/sync.1">sync(1)</a> before
+removing the device.</p>
+<h2><a class="header" href="#installation" id="installation">Installation</a></h2>
+<p>If you are installing Void Linux on one of the ARM devices covered in the
+&quot;<a href="./platforms.html">Supported platforms</a>&quot; page, make sure to read its section
+thoroughly.</p>
+<h3><a class="header" href="#pre-built-images" id="pre-built-images">Pre-built images</a></h3>
+<p>After <a href="../../index.html#downloading-installation-media">downloading and
+verifying</a>  an image, it can
+be written to the relevant media with
+<a href="https://man.voidlinux.org/cat.1">cat(1)</a>,
+<a href="https://man.voidlinux.org/pv.1">pv(1)</a>, or
+<a href="https://man.voidlinux.org/dd.1">dd(1)</a>. For example, to flash it onto an SD
+card located at <code>/dev/mmcblk0</code>:</p>
+<p><code># dd if=&lt;image&gt;.img of=/dev/mmcblk0 bs=4M status=progress</code></p>
+<h3><a class="header" href="#custom-partition-layout" id="custom-partition-layout">Custom partition layout</a></h3>
+<p>Customizing an installation - for example, with a custom partition layout -
+requires a more involved process. Two available options are:</p>
+<ul>
+<li><a href="#tarball-installation">Tarball installation</a>; and - <a href="#chroot-installation">Chroot
+installation</a>.</li>
+</ul>
+<p>To prepare the storage for these installation methods, it is necessary to
+partition the storage medium and then mount the partitions at the correct
+mount points.</p>
+<p>The usual partitioning scheme for ARM devices requires at least two
+partitions, on a drive formatted with an MS-DOS partition table:</p>
+<ul>
+<li>one formatted as FAT32 with partition type <code>0c</code>, which will be mounted on
+<code>/boot</code>;</li>
+<li>one that can be formatted as any file system that Linux can boot from, such as
+ext4, which will be mounted on <code>/</code>. If you're using an SD card, you can
+create the ext4 file system with the <code>^has_journal</code> option - this disables
+journaling, which might increase the drive's life, at the cost of a higher
+chance of data loss.</li>
+</ul>
+<p>There are a variety of tools available for partitioning, e.g.
+<a href="https://man.voidlinux.org/cfdisk.8">cfdisk(8)</a>.</p>
+<p>To access the newly created file systems, it is necessary to mount
+them. This guide will assume that the second partition will be mounted on
+<code>/mnt</code>, but you may mount it elsewhere. To mount these filesystems, you can
+use the commands below, replacing the device names with the appropriate ones
+for your setup:</p>
+<pre><code class="language-#mount/dev/mmcblk0p2/mnt#mkdir/mnt/boot#mount/dev/mmcblk0p1">/mnt/boot ```
+
+#### Tarball installation
+
+First, [download and verify](../../index.md#downloading-installation-media)
+a PLATFORMFS or ROOTFS tarball for your desired platform and [prepare your
+storage medium](#custom-partition-layout). Then, unpack the tarball onto the
+file system using [tar(1)](https://man.voidlinux.org/tar.1):
+
+``` # tar xvfp &lt;image&gt;.tar.xz -C /mnt ```
+
+#### Chroot installation
+
+It is also possible to perform a chroot installation, which can require the
+`qemu-user-static` package together with either the `binfmt-support` or
+`proot` package if a computer with an incompatible architecture (such as
+i686) is being used. This guide explains how to use the
+`qemu-&lt;platform&gt;-static` program from `qemu-user-static` with
+[proot(1)](https://man.voidlinux.org/proot.1).
+
+First, [prepare your storage medium](#custom-partition-layout). Then, follow
+either the [XBPS chroot installation](../chroot.md#the-xbps-method) or the
+[ROOTFS chroot installation](../chroot.md#the-rootfs-method) steps, using
+the appropriate architecture and base packages, some of which are listed in
+the &quot;[Supported Platforms](./platforms.md)&quot; section.
+
+Finally, follow the [chroot configuration steps](../chroot.md#configuration)
+steps, but instead of using the
+[chroot(1)](https://man.voidlinux.org/chroot.1)  command to [enter the
+chroot](../chroot.md#entering-the-chroot), use the following command,
+replacing `&lt;platform&gt;` with `arm` for armv6l and armv7l devices, and with
+`aarch64` for aarch64 devices:
+
+``` # proot -q qemu-&lt;platform&gt;-static -r /mnt -w / ```
+
+## Configuration
+
+Some additional configuration steps need to be followed to guarantee a
+working system. Configuring a [graphical
+session](../../../config/graphical-session/index.md) should work as normal.
+
+### Logging in
+
+For the pre-built images and tarball installations, the `root` user password
+is `voidlinux`.
+
+### fstab
+
+The `/boot` partition should be added to `/etc/fstab`, with an entry similar
+to the one below. It is possible to boot without that entry, but updating
+the kernel package in that situation can lead to breakage, such as being
+unable to find kernel modules, which are essential for functionality such as
+wireless connectivity. If you aren't using an SD card, replace
+`/dev/mmcblk0p1` with the appropriate device path.
+
+``` /dev/mmcblk0p1 /boot vfat defaults 0 0 ```
+
+### System time
+
+Several of the ARM devices supported by Void Linux don't have battery
+powered real time clocks (RTCs), which means they won't keep track of time
+once powered off. This issue can present itself as HTTPS errors when
+browsing the Web or using the package manager. It is possible to set the
+time manually using the [date(1)](https://man.voidlinux.org/date.1)
+utility. In order to fix this issue for subsequent boots, install and enable
+[an NTP client](../../../config/date-time.md#ntp). Furthermore, it is
+possible to install the `fake-hwclock` package, which provides the
+`fake-hwclock` service.
+[fake-hwclock(8)](https://man.voidlinux.org/fake-hwclock.8) periodically
+stores the current time in a configuration file and restores it at boot,
+leading to a better initial approximation of the current time, even without
+a network connection.
+
+**Warning**: Images from before 2020-03-16 might have an issue where the
+installation of the `chrony` package, the default NTP daemon, is incomplete, and
+the system will be missing the `chrony` user. This can be checked in the output
+of the [getent(1)](https://man.voidlinux.org/getent.1) command, which will be
+empty if it doesn't exist:
+
+``` $ getent group chrony chrony:x:997 ```
+
+In order to fix this, it is necessary to reconfigure the `chrony` package
+using [xbps-reconfigure(1)](https://man.voidlinux.org/xbps-reconfigure).
+
+### Graphical session
+
+The `xf86-video-fbturbo` package ships a modified version of the [DDX Xorg
+driver](../../../config/graphical-session/xorg.md#ddx) found in the
+`xf86-video-fbdev` package, which is optimized for ARM devices. This can be
+used for devices which lack more specific drivers.
+</code></pre>
+
+				</main>
+
+				<nav id="nav-wide-wrapper" aria-label="Page navigation">
+					
+						<a href="../../../installation/guides/fde.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+								<path d="M4 10l9 9 1.4-1.5L7 10l7.4-7.5L13 1z"/>
+							</svg>
+						</a>
+					
+
+					
+						<a href="../../../installation/guides/arm-devices/platforms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+								<path d="M7 1L5.6 2.5 13 10l-7.4 7.5L7 19l9-9z"/>
+							</svg>
+						</a>
+					
+				</nav>
+			</div>
+		</div>
+
+        
+
+        
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
